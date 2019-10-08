@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class PollingProgram {
+	public static void main(String[] args) {
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		//string array of 5 important issues (topics) to rate
+      String[] topics = new String[] {"Family   ", "Friends  ", "Pets     ", "Education", "Financial"};
+      //rows for tocpis and column for ratings
+      int[][] responses = new int[5][10];
+		
+      int response;
+      int totalResponses = 0, totalResponders = 0;
+      boolean notFinished = true;
+      
+      while (notFinished)
+      {
+    	  totalResponders += 1;
+    	  System.out.println("Please rate the most important topic on a 1-10 scale");
+    	  for (int i = 0; i < 5; ++i) {
+    		  System.out.println(topics[i]);
+    		  response = keyboard.nextInt();
+    		  // responses 
+    		  responses[i][response - 1] += 1;
+    	  }
+    	  
+    	  System.out.println("Is someone else going to vote? (y-n)");
+    	  String answer = keyboard.next();
+    	  if(answer.toUpperCase() == "N") {
+    		  notFinished = false;
+    	  }
+    	  System.out.println();
+    	  System.out.println("           1  2  3  4  5  6  7  8  9  10");
+    	  
+    	  for (int i = 0; i < 5; ++i) {
+    		  System.out.print(topics[i] + "  ");
+    		  for (int j = 0; j < 10; ++j) {
+    			  System.out.println(responses[i][j] + "  ");
+    		  }
+    		  System.out.println();
+    	  }
+    	  
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+//      /promts user to rate each topic
+//		System.out.println("Please rate each topic from 1 (least important) to 10 (most important)");
+//		System.out.println("- Family - Friends - Animals - Education - Financial -");
+//		
+//		//guides the reader through the topics
+//		for (int i = 0; i < topics.length; ++i) {
+//			System.out.println();
+//			System.out.print("Enter your rating for " + topics[i] + ":");
+//			int rating = keyboard.nextInt();
+//			System.out.println("You rated " + topics[i] + " a " + rating + ".");
+//		}
+//		
+//		
+//		
+//		//summary array of survey (responses)
+//		
+		
+		
+	}
+}

@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class BmiCalculator {
+	public static void main(String[] args) {
+		
+		
+		
+		
+//		
+//		Scanner keyboard = new Scanner(System.in);
+//		double weightInPounds, heightInInches;
+//		double bmiPoundInches;
+//		//Inches and Pounds BMI Calculator
+//		
+//		//prompt the user for heightInInches
+//		System.out.println("Enter your height (in inches): ");
+//		//get users heightInInches
+//		heightInInches = keyboard.nextDouble();
+//		//print user heightInInches
+//		System.out.println("Height: " + heightInInches + "in");
+//		System.out.println();
+//		
+//		//prompt the user for weightInPounds
+//		System.out.println("Enter your weight (in pounds): ");
+//		//get users weightInPound
+//		weightInPounds = keyboard.nextDouble();
+//		//print user weightInPounds
+//		System.out.println("Weight: " + weightInPounds + "lbs");
+//		System.out.println();
+//		
+//		//calculate BMI using pounds and inches
+//		bmiPoundInches = (703 * weightInPounds) / Math.pow(heightInInches, 2);
+//		//print out the result of bmiPoundInches
+//		System.out.print("Your BMI is: "+ Math.round(bmiPoundInches * 10) / 10.0);		
+		
+		
+		
+		//Meters and Kilograms BMI Calculator
+		
+		Scanner keyboard = new Scanner(System.in);
+		double weightInKilograms, heightInCentimeters;
+		double bmiKilogramsCentimeters;
+		//Inches and Pounds BMI Calculator
+		
+		//prompt the user for heightInCentimeters
+		System.out.println("Enter your height (in centimeters): ");
+		//get users heightInInches
+		heightInCentimeters = keyboard.nextDouble();
+		//print user heightInCentimeters
+		System.out.println("Height: " + heightInCentimeters + "in");
+		System.out.println();
+		
+		//prompt the user for weightInKilograms
+		System.out.println("Enter your weight (in kilograms): ");
+		//get users weightInKilograms
+		weightInKilograms = keyboard.nextDouble();
+		//print user weightInKilograms
+		System.out.println("Weight: " + weightInKilograms + "lbs");
+		System.out.println();
+		
+		//calculate BMI using pounds and inches
+		bmiKilogramsCentimeters = (703 * weightInKilograms) / Math.pow(heightInCentimeters, 2);
+		//print out the result of bmiPoundInches
+		System.out.print("Your BMI is: "+ Math.round(bmiKilogramsCentimeters * 10) / 10.0);
+		
+		
+	}
+	
+}

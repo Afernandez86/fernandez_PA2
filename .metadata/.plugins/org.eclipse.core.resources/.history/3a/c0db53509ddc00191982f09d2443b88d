@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Encryption {
+   public static void main(String[] args) {
+	   
+      // 4 digits needed for userInput
+      final int MAX_DIGITS = 4;
+	   
+      //array to store userInput
+      int[] userInput = new int[MAX_DIGITS];
+      // array index
+      int i = 0;
+	   
+      //prompt the user to enter 4 digits
+      System.out.print("Enter 4 digits: ");
+	  
+      // get userInput from user
+      Scanner keyboard = new Scanner(System.in);
+      
+      //loop to fill array
+      for(i = 0; i <userInput.length; ++i) {
+    	  userInput[i] = keyboard.nextInt();
+    	  System.out.print(userInput[i]);
+      }
+      
+   }
+}

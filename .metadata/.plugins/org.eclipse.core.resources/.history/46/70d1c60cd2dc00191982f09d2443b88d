@@ -1,0 +1,30 @@
+java.util.Scanner;
+
+public class PollingProgram {
+	public static void main(String[] args) {
+		
+		//string array of 5 important issues (topics) to rate
+		String[] topics = new String[5];
+		topics[0] = "Family";
+		topics[1] = "Friends";
+		topics[2] = "Animals";
+		topics[3] = "Education";
+		topics[4] = "Financial";
+		
+		//promts user to rate each topic
+		System.out.println("Please rate each topic from 1 (least important) to 10 (most important)");
+		
+		//guides the reader through the topics
+		for (int i = 0; i < topics.length; ++i) {
+			System.out.print("Enter your rating for " + topics[i] + ":");
+			
+		}
+		
+		
+		
+		//summary array of survey (responses)
+		int[][] responses = new int[5][10];
+		
+		
+	}
+}

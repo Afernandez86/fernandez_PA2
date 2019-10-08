@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Encryption {
+   public static void main(String[] args) {
+	   
+      //prompt the user to enter 4 digits
+      System.out.print("Enter 4 digits: \n");
+      Scanner keyboard = new Scanner(System.in);
+      // get userInput from user
+      int userInput = keyboard.nextInt();
+      
+      //print user input
+      System.out.print("The integer you entered is: " + userInput);
+      
+   }
+}

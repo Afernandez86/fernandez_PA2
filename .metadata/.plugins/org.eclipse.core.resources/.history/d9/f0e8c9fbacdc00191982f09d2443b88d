@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Encryption {
+   public static void main(String[] args) {
+	   
+    
+      
+      // array index and userInput
+      int i = 0, userInput;
+	   
+      //prompt the user to enter 4 digits
+      System.out.print("Enter 4 digits: \n");
+      // get userInput from user
+      Scanner keyboard = new Scanner(System.in);
+      
+      userInput = keyboard.nextInt();
+      
+   }
+}

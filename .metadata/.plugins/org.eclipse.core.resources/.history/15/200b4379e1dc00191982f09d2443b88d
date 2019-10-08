@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class PollingProgram {
+	public static void main(String[] args) {
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		//string array of 5 important issues (topics) to rate
+      String[] topics = new String[] {"Family   ", "Friends  ", "Pets     ", "Education", "Financial"};
+      //rows for tocpis and column for ratings
+      int[][] responses = new int[5][10];
+		
+      int response;
+      int totalResponses = 0, totalResponders = 0;
+      boolean notFinished = true;
+      int[] highestAndLowest = new int[5];
+      
+      while (notFinished)
+      {
+    	  totalResponders += 1;
+    	  System.out.println("Please rate the most important topic on a 1-10 scale");
+    	  for (int i = 0; i < 5; ++i) {
+    		  System.out.println(topics[i]);
+    		  response = keyboard.nextInt();
+    		  // responses 
+    		  responses[i][response - 1] += 1;
+    	  }
+    	  
+    	  System.out.println("Is someone else going to vote? (y-n)");
+    	  String answer = keyboard.next();
+    	  if(answer.toUpperCase() == "N") {
+    		  notFinished = false;
+    	  }
+    	  System.out.println("           1  2  3  4  5  6  7  8  9  10  AVG");
+    	  
+    	  for (int i = 0; i < 5; ++i)
+    	  {
+    		  System.out.print(topics[i] + "  ");
+    		  for (int j = 0; j < 10; ++j) {
+    			  System.out.print(responses[i][j] + "  ");
+    			  totalResponses += responses[i][j] * (j + 1);
+    		  }
+    		  
+    		  //add total votes for each topic
+    		  highestAndLowest[i] = totalResponses;
+    		  System.out.print(Math.round(totalResponses * 1.00 / totalResponders ) + "   ");
+    		  System.out.println();
+    		  totalResponses = 0;
+    	  }
+    	  // find the highest and lowest value
+    	  int highest = highestAndLowest[0];
+    	  int lowest = highestAndLowest[0];
+    	  int tempHighest = 0;
+    	  int tempLowest = 0;
+    	  
+    	  for(int r = 1; r  < 5; ++r) {
+    		  if (highestAndLowest[r] > highest)
+				{
+					highest = highestAndLowest[r];
+					tempHighest = r;
+				}
+    		  if (highestAndLowest[r] < lowest) {
+    			  lowest = highestAndLowest[r];
+    			  tempLowest = r;
+    		  }
+    	  }
+    	  
+    	  System.out.println("Topic with highest total points is " + topics[tempHighest] 
+    			  + ". It recieved " + highest + " points.");
+    	  System.out.println("Topic with lowest total points is " + topics[tempLowest] 
+    			  + ". It recieved " + lowest + " points.");
+    	  //console read?? C++ 
+      }
+		
+	}
+}

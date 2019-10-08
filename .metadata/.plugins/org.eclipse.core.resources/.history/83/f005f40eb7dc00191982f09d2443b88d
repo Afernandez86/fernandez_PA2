@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class BmiCalculator {
+	public static void main(String[] args) {
+		
+		Scanner keyboard = new Scanner(System.in);
+		double weightInPounds, heightInInches;
+		
+		//Inches and Pounds BMI Calculator
+		
+		//prompt the user for weightInPounds
+		System.out.println("Enter your height (in inches): ");
+		//get user weightInPound
+		weightInPounds = keyboard.nextDouble();
+		//print user weightInPounds
+		System.out.print("Height: " + weightInPounds + " inches");
+		
+//		System.out.print(" inches");
+//		System.out.print("Weight: ");
+//		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Meters and Kilograms BMI Calculator
+		
+	}
+	
+}

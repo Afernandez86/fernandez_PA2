@@ -1,0 +1,14 @@
+
+public class PollingProgram {
+	public static void main(String[] args) {
+		//string array of 5 important issues (topics) to rate
+		String[] topics[5] = {"Family", "Friends", "Animals", "Education", "Financial"};
+		
+		
+		
+		//summary array of survey (responses)
+		int[][] responses = new int[5][10];
+		
+		
+	}
+}

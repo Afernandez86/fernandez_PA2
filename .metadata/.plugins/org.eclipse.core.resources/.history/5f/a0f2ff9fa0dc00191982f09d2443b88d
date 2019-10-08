@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Encryption {
+   public static void main(String[] args) {
+	   
+      // 4 digits needed for userInput
+      final int MAX_DIGITS = 4;
+	   
+      //array to store userInput
+      int[] userInput = new int[MAX_DIGITS];
+      // array index
+      int i = 0;
+	   
+      //prompt the user to enter 4 digits
+      System.out.print("Enter 4 digits: \n");
+	  
+      // get userInput from user
+      Scanner keyboard = new Scanner(System.in);
+      
+      //loop to fill array with userInput
+      for(i = 0; i <userInput.length; ++i) {
+    	  userInput[i] = keyboard.nextInt();
+      }
+     
+      //loop to print the array's userInput
+      System.out.print("You entered: ");
+      for(i = 0; i <userInput.length; ++i) {
+    	  System.out.print(userInput[i]);
+      }
+      
+      /*replace each digit with the result of adding 7 and 
+      getting the remainder after dividing the new value by 10*/
+      for(i = 0; i <userInput.length; ++i) {
+    	  userInput[i] = (((userInput[i] + 7) / 10) % 10);
+      }
+      
+      System.out.print("You entered: ");
+      for(i = 0; i <userInput.length; ++i) {
+    	  System.out.print(userInput[i]);
+      }
+      
+   }
+}
